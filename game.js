@@ -3,7 +3,7 @@
 function getComputerChoice() {
     const compPicks = ["Rock", "Paper", "Scissors"]
     let compPick = compPicks[Math.floor(Math.random()*(3))]
-    console.log(compPick)
+    return compPick
 }
 
 function playGame(playerChoice, compChoice) {
@@ -29,5 +29,12 @@ function playGame(playerChoice, compChoice) {
         } else {
             console.log(`You Lose! ${compChoice} beats ${playerChoice}`)
         }
+    }
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        input = prompt('Pick a Choice')
+        playGame(String(input), getComputerChoice())
     }
 }
